@@ -1,0 +1,6 @@
+{
+  "name": "MSH - Clínica, Gestão e Serviços Médicos",
+  "description": "Website institucional para a empresa MSH - Clínica, Gestão e Serviços Médicos LTDA, especializado em serviços de saúde.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
