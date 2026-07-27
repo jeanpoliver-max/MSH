@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,19 +14,12 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleWhatsApp = (e: React.MouseEvent) => {
+  const handleWhatsApp = (e: React.MouseEvent | React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) return alert("Por favor, preencha pelo menos nome e telefone.");
     const text = `Olá! Meu nome é ${formData.name}. Sou ${formData.userType}. %0A%0ATelefone: ${formData.phone}%0A%0A${formData.message}`;
     const targetPhone = formData.userType === 'Médico(a)' ? '5585987884574' : '5547984088090';
     window.open(`https://wa.me/${targetPhone}?text=${text}`, '_blank');
-  };
-
-  const handleEmail = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = `Contato Site MSH - ${formData.userType} - ${formData.name}`;
-    const body = `Nome: ${formData.name}%0AEmail: ${formData.email}%0ATelefone: ${formData.phone}%0ATipo: ${formData.userType}%0A%0AMensagem:%0A${formData.message}`;
-    window.location.href = `mailto:gestao@mshservicosmedicos.com.br?cc=administrativo@mshservicosmedicos.com.br&subject=${subject}&body=${body}`;
   };
 
   return (
@@ -49,7 +42,7 @@ export default function Contact() {
         </div>
 
         <div className="max-w-3xl mx-auto bg-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md border border-white/20">
-          <form onSubmit={handleEmail} className="space-y-6">
+          <form onSubmit={handleWhatsApp} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-blue-100 mb-2">Nome completo *</label>
@@ -107,20 +100,13 @@ export default function Contact() {
               ></textarea>
             </div>
 
-            <div className="pt-4 flex flex-col sm:flex-row gap-4">
+            <div className="pt-4">
               <button 
-                type="button" onClick={handleWhatsApp}
-                className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl font-bold transition-colors shadow-lg"
+                type="submit"
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl font-bold transition-colors shadow-lg"
               >
                 <MessageCircle size={20} />
                 Enviar via WhatsApp
-              </button>
-              <button 
-                type="submit"
-                className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-[#E91E63] hover:bg-[#C2185B] border-none text-white rounded-xl font-bold transition-all shadow-lg"
-              >
-                <Send size={20} />
-                Enviar Formulário
               </button>
             </div>
           </form>

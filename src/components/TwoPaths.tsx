@@ -10,12 +10,13 @@ export default function TwoPaths() {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {/* Card 1 */}
-          <div className="bg-[#0077B6] rounded-2xl p-10 text-white shadow-lg flex flex-col items-start hover:shadow-xl transition-shadow relative overflow-hidden">
-            <div className="bg-white/10 p-4 rounded-xl mb-6 text-white relative z-10">
+          <div className="bg-white border-t-4 border-[#0077B6] rounded-2xl p-10 text-[#1F2937] shadow-lg flex flex-col items-start hover:shadow-xl transition-shadow relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#0077B6]/5 rounded-bl-[100px] -z-0 pointer-events-none"></div>
+            <div className="bg-[#0077B6]/10 p-4 rounded-xl mb-6 text-[#0077B6] relative z-10">
               <Building2 size={32} />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-white relative z-10">Para Instituições de Saúde</h3>
-            <p className="text-blue-100 mb-8 leading-relaxed flex-grow relative z-10">
+            <h3 className="text-2xl font-bold mb-4 text-[#1F2937] relative z-10">Para Instituições de Saúde</h3>
+            <p className="text-[#6B7280] mb-8 leading-relaxed flex-grow relative z-10">
               Gestão de equipes médicas, SAMU, atendimento hospitalar, ambulatório e consultoria. Atendemos hospitais, municípios e clínicas em 4 estados.
             </p>
             <a href="#contato" className="inline-flex items-center px-6 py-3 bg-[#E91E63] hover:bg-[#C2185B] text-white rounded-lg font-semibold transition-colors relative z-10">

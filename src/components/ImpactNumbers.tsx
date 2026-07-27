@@ -1,13 +1,13 @@
 import { useEffect, useState, useRef } from 'react';
-import { useInView } from 'motion/react';
 
 function Counter({ end, suffix = '', duration = 2 }: { end: number, suffix?: string, duration?: number }) {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (isInView) {
+    let observer: IntersectionObserver;
+    
+    const startAnimation = () => {
       let startTime: number | null = null;
       const step = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
@@ -20,10 +20,35 @@ function Counter({ end, suffix = '', duration = 2 }: { end: number, suffix?: str
         }
       };
       window.requestAnimationFrame(step);
-    }
-  }, [isInView, end, duration]);
+    };
 
-  return <span ref={ref}>{count.toLocaleString('pt-BR')}{suffix}</span>;
+    if (ref.current) {
+      observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          startAnimation();
+          if (ref.current) observer.unobserve(ref.current);
+        }
+      }, { threshold: 0.1 });
+      
+      observer.observe(ref.current);
+    } else {
+       setCount(end);
+    }
+
+    return () => {
+      if (observer && ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [end, duration]);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === 'undefined') {
+       setCount(end);
+    }
+  }, [end]);
+
+  return <span ref={ref} data-target={end} data-suffix={suffix}>{count.toLocaleString('pt-BR')}{suffix}</span>;
 }
 
 export default function ImpactNumbers() {
@@ -40,7 +65,7 @@ export default function ImpactNumbers() {
             <div className="text-xs uppercase tracking-wider font-medium text-blue-100">Plantões Mensais</div>
           </div>
           <div className="text-center px-4">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-1">0<Counter end={4} /></div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+<Counter end={4} /></div>
             <div className="text-xs uppercase tracking-wider font-medium text-blue-100">Estados Atendidos</div>
           </div>
           <div className="text-center px-4">
@@ -48,7 +73,7 @@ export default function ImpactNumbers() {
             <div className="text-xs uppercase tracking-wider font-medium text-blue-100">Cidades Atendidas</div>
           </div>
           <div className="text-center px-4 col-span-2 lg:col-span-1">
-            <div className="text-xl md:text-2xl font-bold text-white uppercase mt-2 md:mt-1 mb-1">ACLS / ATLS</div>
+            <div className="text-xl md:text-2xl font-bold text-white uppercase mt-2 md:mt-1 mb-1">ACLS / PALS / ATLS</div>
             <div className="text-xs uppercase tracking-wider font-medium text-blue-100">Protocolos Int.</div>
           </div>
         </div>
@@ -56,3 +81,4 @@ export default function ImpactNumbers() {
     </section>
   );
 }
+

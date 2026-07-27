@@ -25,9 +25,22 @@ export default function Header() {
       </div>
       <header className="relative w-full bg-white border-b border-gray-200 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
-        <a href="#inicio" className="flex items-center space-x-3">
-          <img src="https://i.imgur.com/vYCZCGE.png" alt="MSH Serviços Médicos" className="h-12 w-auto object-contain" />
-          <span className="text-lg font-bold text-[#0077B6] hidden md:inline tracking-tight">Clínica, Gestão e Serviços Médicos</span>
+        <a href="#inicio" className="flex items-center space-x-3 group">
+          <div className="relative h-[50px] flex items-center justify-center">
+            <img 
+              src="https://i.imgur.com/vYCZCGE.png" 
+              alt="MSH - Clínica, Gestão e Serviços Médicos - Logotipo" 
+              className="h-full w-auto object-contain z-10"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.nextElementSibling?.classList.remove('hidden');
+              }}
+            />
+            <div className="hidden absolute inset-0 flex items-center justify-center bg-[#0077B6] rounded-lg w-[50px]">
+              <span className="text-white font-bold text-xl">MSH</span>
+            </div>
+          </div>
+          <span className="text-lg font-bold text-[#0077B6] hidden md:inline tracking-tight group-hover:text-[#E91E63] transition-colors">Clínica, Gestão e Serviços Médicos</span>
         </a>
         
         {/* Desktop Nav */}

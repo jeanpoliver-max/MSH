@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, MapPin, Mail, Phone } from 'lucide-react';
+import { Instagram, MapPin, Mail, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,7 +8,18 @@ export default function Footer() {
           {/* Column 1 */}
           <div>
             <div className="mb-6 bg-white rounded-xl inline-block p-3">
-              <img src="https://i.imgur.com/vYCZCGE.png" alt="MSH Serviços Médicos" className="h-12 w-auto object-contain" />
+              <img 
+                src="https://i.imgur.com/vYCZCGE.png" 
+                alt="MSH - Clínica, Gestão e Serviços Médicos - Logotipo" 
+                className="h-12 w-auto object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden bg-[#0077B6] rounded-lg w-12 h-12 flex items-center justify-center">
+                <span className="text-white font-bold text-xl">MSH</span>
+              </div>
             </div>
             <p className="text-blue-200 mb-6 leading-relaxed">
               Gestão Médica de Alta Performance para Instituições de Saúde. Mais de 2.000 médicos ativos em 4 estados.
@@ -78,13 +89,13 @@ export default function Footer() {
                 </div>
               </li>
             </ul>
-            <div className="flex items-center gap-4">
-              <a href="https://www.instagram.com/mshservicosmedicos" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#E91E63] transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#E91E63] transition-colors">
-                <Linkedin size={20} />
-              </a>
+            <div>
+              <span className="text-sm font-semibold text-blue-200 block mb-3 uppercase tracking-wider">Siga-nos no Instagram</span>
+              <div className="flex items-center gap-4">
+                <a href="https://www.instagram.com/mshservicosmedicos" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#E91E63] transition-colors">
+                  <Instagram size={20} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
