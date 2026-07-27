@@ -4,13 +4,25 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1F2937] mb-6">Nossa Missão</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1F2937] mb-6">Sobre Nós</h2>
             <div className="w-20 h-1 bg-[#E91E63] mb-8"></div>
-            <p className="text-lg text-[#6B7280] leading-relaxed mb-10 italic border-l-4 border-gray-200 pl-6 py-2">
-              "Nosso objetivo é criar um ambiente de trabalho colaborativo e de crescimento, onde médicos se sintam valorizados e possam desenvolver suas carreiras plenamente. Nosso compromisso com a ética e a melhoria contínua em nossos processos garante que todos os nossos profissionais e parceiros trabalhem com tranquilidade e transparência."
-            </p>
             
-            <div className="flex items-center gap-6 mt-12 bg-gray-50 p-6 rounded-2xl">
+            <div className="space-y-4 mb-10">
+              <div className="bg-gray-50 p-5 rounded-2xl border-l-4 border-[#0077B6]">
+                <h3 className="font-bold text-lg text-[#1F2937] mb-1">Missão</h3>
+                <p className="text-[#6B7280]">Garantir soluções médicas seguras, eficientes e responsáveis.</p>
+              </div>
+              <div className="bg-gray-50 p-5 rounded-2xl border-l-4 border-[#E91E63]">
+                <h3 className="font-bold text-lg text-[#1F2937] mb-1">Visão</h3>
+                <p className="text-[#6B7280]">Ser referência nacional em gestão e prestação de serviços médicos.</p>
+              </div>
+              <div className="bg-gray-50 p-5 rounded-2xl border-l-4 border-[#0077B6]">
+                <h3 className="font-bold text-lg text-[#1F2937] mb-1">Valores</h3>
+                <p className="text-[#6B7280]">Ética, transparência, responsabilidade assistencial, compromisso com resultados e melhoria contínua.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-6 mt-8 bg-gray-50 p-6 rounded-2xl">
               <div className="w-16 h-16 rounded-full bg-[#0077B6] text-white flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-inner">
                 WM
               </div>

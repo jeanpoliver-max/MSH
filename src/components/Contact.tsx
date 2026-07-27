@@ -26,12 +26,23 @@ export default function Contact() {
     e.preventDefault();
     const subject = `Contato Site MSH - ${formData.userType} - ${formData.name}`;
     const body = `Nome: ${formData.name}%0AEmail: ${formData.email}%0ATelefone: ${formData.phone}%0ATipo: ${formData.userType}%0A%0AMensagem:%0A${formData.message}`;
-    window.location.href = `mailto:gestao@mshservicosmedicos.com.br?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:gestao@mshservicosmedicos.com.br?cc=administrativo@mshservicosmedicos.com.br&subject=${subject}&body=${body}`;
   };
 
   return (
-    <section id="contato" className="py-24 bg-[#0077B6] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <div className="bg-[#0077B6] py-16 border-b border-blue-800">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+            "A MSH está preparada para atender às demandas do sistema de saúde com seriedade, organização e visão estratégica."
+          </h2>
+          <p className="text-blue-200">
+            MSH – Clínica, Gestão e Serviços Médicos LTDA | Parceira estratégica em soluções médicas.
+          </p>
+        </div>
+      </div>
+      <section id="contato" className="py-24 bg-[#0077B6] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Vamos Conversar Sobre Sua Demanda</h2>
           <p className="text-lg text-blue-100">Preencha o formulário ou fale diretamente pelo WhatsApp</p>
@@ -116,5 +127,6 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    </>
   );
 }

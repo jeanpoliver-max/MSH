@@ -49,9 +49,15 @@ export default function Footer() {
                 <MapPin size={20} className="flex-shrink-0 mt-1" />
                 <span>Av. Brasil, 386 - Sala 04-B<br/>Centro - Mandirituba/PR<br/>CEP 83.800-036</span>
               </li>
-              <li className="flex items-center gap-3 text-blue-200">
-                <Mail size={20} className="flex-shrink-0" />
-                <a href="mailto:gestao@mshservicosmedicos.com.br" className="hover:text-white">gestao@mshservicosmedicos.com.br</a>
+              <li className="flex flex-col gap-2 text-blue-200 mt-2">
+                <div className="flex items-center gap-3">
+                  <Mail size={20} className="flex-shrink-0" />
+                  <a href="mailto:gestao@mshservicosmedicos.com.br" className="hover:text-white">gestao@mshservicosmedicos.com.br</a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail size={20} className="flex-shrink-0 opacity-0" />
+                  <a href="mailto:administrativo@mshservicosmedicos.com.br" className="hover:text-white">administrativo@mshservicosmedicos.com.br</a>
+                </div>
               </li>
               <li className="flex flex-col gap-2 text-blue-200 mt-2">
                 <div className="flex items-center gap-3">

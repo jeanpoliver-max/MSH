@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import ImpactNumbers from './components/ImpactNumbers';
 import TwoPaths from './components/TwoPaths';
 import Services from './components/Services';
+import Differentials from './components/Differentials';
 import WhyChooseUs from './components/WhyChooseUs';
 import Structure from './components/Structure';
 import Clients from './components/Clients';
@@ -27,6 +28,7 @@ export default function App() {
         <ImpactNumbers />
         <TwoPaths />
         <Services />
+        <Differentials />
         <WhyChooseUs />
         <Structure />
         <Clients />
