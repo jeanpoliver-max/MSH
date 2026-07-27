@@ -19,6 +19,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import CookieBanner from './components/CookieBanner';
+import TermsOfUse from './components/TermsOfUse';
 
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
@@ -28,7 +29,7 @@ export default function App() {
       const hash = window.location.hash;
       setCurrentHash(hash);
       
-      if (hash === '' || hash === '#inicio') {
+      if (hash === '#termos' || hash === '' || hash === '#inicio') {
         window.scrollTo(0, 0);
       } else {
         // Allow a short delay for React to render the main components if coming from privacy page
@@ -45,21 +46,29 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  const isTermsOfUse = currentHash === '#termos';
+
   return (
     <div className="min-h-screen bg-[#F3F4F6] scroll-smooth flex flex-col">
       <Header />
       <main className="flex-grow">
-        <Hero />
-        <ImpactNumbers />
-        <TwoPaths />
-        <Services />
-        <Differentials />
-        <WhyChooseUs />
-        <Structure />
-        <Clients />
-        <About />
-        <Ombudsman />
-        <Contact />
+        {isTermsOfUse ? (
+          <TermsOfUse />
+        ) : (
+          <>
+            <Hero />
+            <ImpactNumbers />
+            <TwoPaths />
+            <Services />
+            <Differentials />
+            <WhyChooseUs />
+            <Structure />
+            <Clients />
+            <About />
+            <Ombudsman />
+            <Contact />
+          </>
+        )}
       </main>
       <Footer />
       <FloatingWhatsApp />
