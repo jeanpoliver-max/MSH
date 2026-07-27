@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ImpactNumbers from './components/ImpactNumbers';
@@ -20,10 +21,34 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import CookieBanner from './components/CookieBanner';
 
 export default function App() {
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      setCurrentHash(hash);
+      
+      if (hash === '' || hash === '#inicio') {
+        window.scrollTo(0, 0);
+      } else {
+        // Allow a short delay for React to render the main components if coming from privacy page
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#F3F4F6] scroll-smooth">
+    <div className="min-h-screen bg-[#F3F4F6] scroll-smooth flex flex-col">
       <Header />
-      <main>
+      <main className="flex-grow">
         <Hero />
         <ImpactNumbers />
         <TwoPaths />

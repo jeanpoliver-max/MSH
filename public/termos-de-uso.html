@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Termos de Uso da MSH - Clínica, Gestão e Serviços Médicos LTDA. Regras e condições de navegação e utilização da plataforma digital.">
+    <meta name="keywords" content="termos de uso, MSH, gestão em saúde, serviços médicos, Mandirituba, Paraná">
+    <meta name="author" content="MSH - Clínica, Gestão e Serviços Médicos LTDA">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Termos de Uso | MSH Serviços Médicos">
+    <meta property="og:description" content="Regras e condições de navegação e utilização da plataforma digital da MSH.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <title>Termos de Uso | MSH Serviços Médicos</title>
+
+    <!-- ===== CSS COM CORES DA MARCA MSH ===== -->
+    <style>
+        /* ===== VARIÁVEIS DE COR DA MARCA MSH ===== */
+        :root {
+            --msh-blue: #0066B2;          /* Azul Ceruleano - Cor Primária */
+            --msh-blue-dark: #004E8C;      /* Azul escuro - Hover/Headers */
+            --msh-blue-light: #E6F0F8;      /* Azul muito claro - Backgrounds suaves */
+            --msh-blue-medium: #3385C4;     /* Azul médio - Elementos secundários */
+            --msh-pink: #E91E63;           /* Magenta/Rosa - Cor de Destaque (cruz médica) */
+            --msh-pink-dark: #C2185B;      /* Rosa escuro - Hover */
+            --msh-pink-light: #FCE4EC;     /* Rosa muito claro - Backgrounds de destaque */
+            --msh-white: #FFFFFF;          /* Branco */
+            --msh-dark: #1A1A1A;           /* Quase preto - Texto principal */
+            --msh-gray: #555555;           /* Cinza médio - Texto secundário */
+            --msh-gray-light: #9E9E9E;    /* Cinza claro - Metadados */
+            --msh-gray-bg: #F5F5F5;       /* Cinza muito claro - Background alternativo */
+            --msh-border: #E0E0E0;        /* Bordas sutis */
+        }
+
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== BASE ===== */
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--msh-dark);
+            background-color: var(--msh-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background: linear-gradient(135deg, var(--msh-blue-dark) 0%, var(--msh-blue) 100%);
+            color: var(--msh-white);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 12px rgba(0, 102, 178, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--msh-white);
+        }
+
+        .header-logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--msh-white);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--msh-blue);
+            position: relative;
+        }
+
+        .header-logo-icon::after {
+            content: "+";
+            color: var(--msh-pink);
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .header-logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .header-logo-text span {
+            color: var(--msh-pink-light);
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .header-nav a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .header-nav a:hover {
+            color: var(--msh-white);
+        }
+
+        .header-nav .nav-cta {
+            background: var(--msh-pink);
+            color: var(--msh-white);
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .header-nav .nav-cta:hover {
+            background: var(--msh-pink-dark);
+            transform: translateY(-1px);
+        }
+
+        /* ===== HERO DA PÁGINA ===== */
+        .page-hero {
+            background: var(--msh-blue-light);
+            padding: 3rem 1.5rem 2.5rem;
+            text-align: center;
+            border-bottom: 3px solid var(--msh-blue);
+        }
+
+        .page-hero .breadcrumb {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            color: var(--msh-gray-light);
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--msh-blue-dark);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-hero .subtitle {
+            font-size: 1rem;
+            color: var(--msh-gray);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-hero .date {
+            font-size: 0.85rem;
+            color: var(--msh-gray-light);
+        }
+
+        /* Decorative accent line */
+        .page-hero::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--msh-pink);
+            margin: 1.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* ===== CONTEÚDO PRINCIPAL ===== */
+        .content-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        .intro-text {
+            font-size: 1rem;
+            color: var(--msh-gray);
+            text-align: justify;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: var(--msh-gray-bg);
+            border-left: 4px solid var(--msh-blue);
+            border-radius: 0 8px 8px 0;
+            line-height: 1.8;
+        }
+
+        .intro-text strong {
+            color: var(--msh-blue-dark);
+        }
+
+        /* ===== SEÇÕES ===== */
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--msh-blue-dark);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--msh-blue-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section h2::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background: var(--msh-pink);
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .section p {
+            font-size: 0.95rem;
+            color: var(--msh-dark);
+            text-align: justify;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .section p strong {
+            color: var(--msh-blue-dark);
+        }
+
+        .section p em {
+            color: var(--msh-gray);
+        }
+
+        /* ===== LISTAS ===== */
+        .section ul {
+            list-style: none;
+            margin: 1rem 0 1.5rem 0;
+            padding: 0;
+        }
+
+        .section ul li {
+            font-size: 0.95rem;
+            color: var(--msh-dark);
+            padding: 0.6rem 0 0.6rem 2rem;
+            position: relative;
+            line-height: 1.7;
+            border-bottom: 1px solid var(--msh-border);
+        }
+
+        .section ul li:last-child {
+            border-bottom: none;
+        }
+
+        .section ul li::before {
+            content: "+";
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            color: var(--msh-pink);
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .section ul li strong {
+            color: var(--msh-blue-dark);
+        }
+
+        /* ===== DESTAQUE LGPD ===== */
+        .lgpd-highlight {
+            background: var(--msh-pink-light);
+            border-left: 4px solid var(--msh-pink);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .lgpd-highlight p {
+            margin-bottom: 0.5rem;
+        }
+
+        .lgpd-highlight strong {
+            color: var(--msh-pink-dark);
+        }
+
+        /* ===== BOTÃO VOLTAR ===== */
+        .back-button-wrapper {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--msh-border);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.85rem 2.5rem;
+            background: var(--msh-blue);
+            color: var(--msh-white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 102, 178, 0.2);
+        }
+
+        .back-button:hover {
+            background: var(--msh-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 102, 178, 0.3);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--msh-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .site-footer p {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .site-footer .footer-brand {
+            color: var(--msh-white);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .site-footer .footer-brand span {
+            color: var(--msh-pink);
+        }
+
+        .site-footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .site-footer .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s ease;
+        }
+
+        .site-footer .footer-links a:hover {
+            color: var(--msh-white);
+        }
+
+        .site-footer .footer-copyright {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+
+            .header-logo-text {
+                font-size: 1.1rem;
+            }
+
+            .page-hero {
+                padding: 2rem 1rem 1.5rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .page-hero .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .content-wrapper {
+                padding: 2rem 1rem 3rem;
+            }
+
+            .section h2 {
+                font-size: 1.1rem;
+            }
+
+            .section p,
+            .section ul li {
+                font-size: 0.9rem;
+            }
+
+            .intro-text {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .back-button {
+                padding: 0.75rem 2rem;
+                font-size: 0.85rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .header-logo-icon {
+                width: 34px;
+                height: 34px;
+            }
+
+            .section h2 {
+                font-size: 1rem;
+            }
+
+            .section ul li {
+                padding-left: 1.75rem;
+            }
+        }
+
+        /* ===== ACESSIBILIDADE ===== */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        a:focus-visible,
+        .back-button:focus-visible {
+            outline: 3px solid var(--msh-pink);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo">
+                <div class="header-logo-icon"></div>
+                <span class="header-logo-text">MSH <span>Serviços Médicos</span></span>
+            </a>
+            <nav class="header-nav">
+                <a href="index.html">Início</a>
+                <a href="index.html#servicos">Serviços</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#contato">Contato</a>
+                <a href="index.html#contato" class="nav-cta">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO DA PÁGINA ===== -->
+    <section class="page-hero">
+        <p class="breadcrumb">MSH - Clínica, Gestão e Serviços Médicos LTDA</p>
+        <h1>Termos de Uso</h1>
+        <p class="subtitle">Regras e condições de navegação e utilização da plataforma digital</p>
+        <p class="date">27 de julho de 2026</p>
+    </section>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="content-wrapper">
+
+        <div class="intro-text">
+            Bem-vindo ao site oficial da <strong>MSH - Clínica, Gestão e Serviços Médicos LTDA</strong>. Estes Termos de Uso regulamentam a utilização de nossa plataforma digital e serviços associados. Ao navegar ou interagir com nosso site, você concorda integralmente com as condições aqui estabelecidas.
+        </div>
+
+        <!-- Seção 1 -->
+        <section class="section">
+            <h2>1. Identificação do Controlador</h2>
+            <p>O site e todo o seu conteúdo são operados e gerenciados pela <strong>MSH - Clínica, Gestão e Serviços Médicos LTDA</strong>, pessoa jurídica de direito privado, inscrita no <strong>CNPJ sob o nº 34.145.071/0001-02</strong>, com sede administrativa localizada na <strong>Av. Brasil, 386 - Sala 04-B, Centro, Mandirituba/PR, CEP 83.800-036</strong>. Para questões relacionadas a estes termos, o contato deve ser realizado via e-mail: <strong>administrativo@mshservicosmedicos.com.br</strong>.</p>
+        </section>
+
+        <!-- Seção 2 -->
+        <section class="section">
+            <h2>2. Objeto dos Termos</h2>
+            <p>Estes Termos de Uso estabelecem as regras e condições para acesso, navegação e utilização do site oficial da <strong>MSH</strong>, bem como dos serviços, conteúdos e funcionalidades nele disponibilizados. O objetivo da plataforma é fornecer informações institucionais, facilitar o contato comercial e gerir o relacionamento com profissionais de saúde e parceiros. Ao acessar e utilizar o site, o usuário declara ter lido, compreendido e aceitado integralmente estes Termos. Caso não concorde com qualquer disposição, o usuário deve abster-se de utilizar a plataforma.</p>
+        </section>
+
+        <!-- Seção 3 -->
+        <section class="section">
+            <h2>3. Definições</h2>
+            <p>Para fins destes Termos, aplicam-se as seguintes definições:</p>
+            <ul>
+                <li><strong>Usuário:</strong> Qualquer pessoa física ou jurídica que acesse ou interaja com o site.</li>
+                <li><strong>Site:</strong> O endereço eletrônico oficial da MSH e suas subpáginas.</li>
+                <li><strong>Conteúdo:</strong> Textos, imagens, vídeos, logotipos, designs e códigos que compõem a plataforma.</li>
+                <li><strong>Serviços:</strong> Funcionalidades de contato, cadastro de currículos e informações sobre gestão em saúde.</li>
+                <li><strong>LGPD:</strong> Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018).</li>
+                <li><strong>Dados Pessoais:</strong> Informações relacionadas a pessoa natural identificada ou identificável.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 4 -->
+        <section class="section">
+            <h2>4. Aceitação dos Termos</h2>
+            <p>O acesso ao site implica na aceitação automática e integral destes Termos de Uso. A <strong>MSH</strong> reserva-se o direito de modificar estes termos a qualquer momento, visando a melhoria dos serviços ou adequação legal, sendo responsabilidade do usuário revisá-los periodicamente. A continuidade do uso após a publicação de alterações constitui aceitação tácita das novas condições.</p>
+        </section>
+
+        <!-- Seção 5 -->
+        <section class="section">
+            <h2>5. Descrição dos Serviços e Funcionalidades do Site</h2>
+            <p>O site da <strong>MSH</strong> tem como finalidade principal:</p>
+            <ul>
+                <li>Apresentar a empresa, sua missão, visão e valores no setor de saúde;</li>
+                <li>Divulgar os serviços de gestão em saúde, alocação de profissionais médicos e gestão de escalas;</li>
+                <li>Permitir o contato comercial e de parcerias através de formulários integrados e botões de redirecionamento para WhatsApp;</li>
+                <li>Receber cadastros e currículos de profissionais de saúde interessados em atuar nas unidades geridas pela MSH;</li>
+                <li>Disponibilizar informações institucionais e documentos de transparência;</li>
+                <li>Integrar a comunicação com redes sociais oficiais (Instagram, LinkedIn, YouTube).</li>
+            </ul>
+        </section>
+
+        <!-- Seção 6 -->
+        <section class="section">
+            <h2>6. Obrigações do Usuário</h2>
+            <p>Ao utilizar nossa plataforma, o usuário obriga-se a:</p>
+            <ul>
+                <li>Fornecer dados verdadeiros, exatos e atualizados em formulários de contato ou cadastro;</li>
+                <li>Não utilizar o site para fins ilícitos, imorais ou que violem direitos de terceiros;</li>
+                <li>Não reproduzir, copiar ou explorar o conteúdo do site sem autorização prévia e por escrito;</li>
+                <li>Não tentar acessar áreas restritas do sistema ou interferir na segurança da plataforma;</li>
+                <li>Respeitar integralmente os direitos de propriedade intelectual da MSH;</li>
+                <li>Não utilizar ferramentas automatizadas (bots, spiders, scraping) para extrair dados sem autorização.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 7 -->
+        <section class="section">
+            <h2>7. Direitos da MSH</h2>
+            <p>A <strong>MSH</strong> reserva-se o direito de, a seu exclusivo critério e a qualquer tempo:</p>
+            <ul>
+                <li>Modificar, suspender ou descontinuar qualquer aspecto do site ou seus serviços;</li>
+                <li>Bloquear o acesso de usuários que violem estes Termos ou a legislação vigente;</li>
+                <li>Remover conteúdos ou mensagens que considere inadequados ou ofensivos;</li>
+                <li>Monitorar o uso da plataforma para garantir a segurança e a integridade dos dados.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 8 -->
+        <section class="section">
+            <h2>8. Propriedade Intelectual</h2>
+            <p>Todo o conteúdo do site, incluindo, mas não se limitando a textos, imagens, logotipos, layouts, código-fonte, design e elementos gráficos, é de propriedade exclusiva da <strong>MSH</strong> ou de terceiros que licenciaram seu uso, estando protegido pela <em>Lei de Direitos Autorais (Lei nº 9.610/98)</em> e pela <em>Lei da Propriedade Industrial (Lei nº 9.279/96)</em>. A reprodução, distribuição, modificação ou comercialização de qualquer conteúdo sem autorização expressa por escrito da <strong>MSH</strong> é estritamente proibida e sujeita às sanções legais cabíveis.</p>
+        </section>
+
+        <!-- Seção 9 -->
+        <section class="section">
+            <h2>9. Proteção de Dados Pessoais</h2>
+            <div class="lgpd-highlight">
+                <p>O tratamento de dados pessoais coletados através do site é regido pela <strong>Política de Privacidade</strong> da empresa, em total conformidade com a <em>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</em>.</p>
+                <p>A <strong>MSH</strong> adota medidas técnicas e administrativas para proteger as informações dos usuários. Recomendamos a leitura integral da Política de Privacidade disponível no rodapé do site.</p>
+                <p>O usuário pode exercer seus direitos de titular (acesso, correção, exclusão) através do canal: <strong>administrativo@mshservicosmedicos.com.br</strong>.</p>
+            </div>
+        </section>
+
+        <!-- Seção 10 -->
+        <section class="section">
+            <h2>10. Limitação de Responsabilidade</h2>
+            <p>A <strong>MSH</strong> empenha seus melhores esforços para manter o site seguro e funcional, contudo, não se responsabiliza por:</p>
+            <ul>
+                <li>Interrupções ou falhas técnicas decorrentes de serviços de terceiros ou provedores de internet;</li>
+                <li>Danos causados por vírus ou softwares maliciosos originados da navegação do usuário em outros sites;</li>
+                <li>Inexatidão de informações fornecidas por usuários em campos de preenchimento livre;</li>
+                <li>Conteúdo de sites de terceiros cujos links estejam presentes em nossa plataforma.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 11 -->
+        <section class="section">
+            <h2>11. Links Externos e Terceiros</h2>
+            <p>O site pode conter links para plataformas externas, como WhatsApp, Instagram e LinkedIn. A <strong>MSH</strong> esclarece que não possui controle sobre tais plataformas e não se responsabiliza pelo conteúdo, políticas de privacidade ou práticas de segurança de sites de terceiros. A interação com esses links é de inteira responsabilidade do usuário.</p>
+        </section>
+
+        <!-- Seção 12 -->
+        <section class="section">
+            <h2>12. Cookies e Tecnologias</h2>
+            <p>Utilizamos cookies para otimizar a experiência de navegação e analisar o tráfego do site (via Google Analytics). Os cookies podem ser essenciais (necessários para o funcionamento) ou analíticos. O usuário pode gerenciar suas preferências de cookies através das configurações de seu navegador ou pelo banner de consentimento exibido no site.</p>
+        </section>
+
+        <!-- Seção 13 -->
+        <section class="section">
+            <h2>13. Modificações dos Termos</h2>
+            <p>Estes Termos de Uso podem ser atualizados periodicamente para refletir mudanças legislativas ou operacionais. A versão mais recente estará sempre disponível nesta página, com a respectiva data de atualização no topo do documento. O uso continuado do site após atualizações implica na concordância com os novos termos.</p>
+        </section>
+
+        <!-- Seção 14 -->
+        <section class="section">
+            <h2>14. Legislação Aplicável e Foro</h2>
+            <p>Estes Termos são regidos e interpretados de acordo com as leis da República Federativa do Brasil. Fica eleito o foro da <strong>Comarca de Mandirituba/PR</strong> para dirimir quaisquer controvérsias oriundas deste documento, com renúncia expressa a qualquer outro, por mais privilegiado que seja.</p>
+        </section>
+
+        <!-- Seção 15 -->
+        <section class="section">
+            <h2>15. Canal de Comunicação</h2>
+            <p>Para dúvidas, sugestões ou reclamações sobre estes Termos de Uso, entre em contato conosco:</p>
+            <ul>
+                <li><strong>E-mail:</strong> administrativo@mshservicosmedicos.com.br</li>
+                <li><strong>Endereço:</strong> Av. Brasil, 386 - Sala 04-B, Centro, Mandirituba/PR</li>
+                <li><strong>Canais Digitais:</strong> WhatsApp oficial disponível no site.</li>
+            </ul>
+        </section>
+
+        <!-- Botão Voltar -->
+        <div class="back-button-wrapper">
+            <a href="index.html" class="back-button">Voltar à Página Inicial</a>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <p class="footer-brand">MSH <span>Serviços Médicos</span></p>
+        <p>Gestão em Saúde • Alocação de Profissionais • Gestão de Escalas</p>
+        <div class="footer-links">
+            <a href="index.html">Início</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="index.html#sobre">Sobre Nós</a>
+            <a href="index.html#contato">Contato</a>
+            <a href="politica-de-privacidade.html">Política de Privacidade</a>
+            <a href="termos-de-uso.html">Termos de Uso</a>
+        </div>
+        <p class="footer-copyright">© 2026 MSH Serviços Médicos. Todos os direitos reservados. CNPJ: 34.145.071/0001-02</p>
+    </footer>
+
+</body>
+</html>

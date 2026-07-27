@@ -103,8 +103,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-blue-300">
           <p>© 2026 MSH - Clínica, Gestão e Serviços Médicos LTDA | CNPJ 34.145.071/0001-02</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white">Política de Privacidade</a>
-            <a href="#" className="hover:text-white">Termos de Uso</a>
+            <a href="politica-de-privacidade.html" className="hover:text-white">Política de Privacidade</a>
+            <a href="termos-de-uso.html" className="hover:text-white">Termos de Uso</a>
           </div>
         </div>
       </div>
