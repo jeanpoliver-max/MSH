@@ -35,7 +35,7 @@ export default function TwoPaths() {
             <p className="text-[#6B7280] mb-8 leading-relaxed flex-grow relative z-10">
               Oportunidades de plantão em hospitais e clínicas em 4 estados. Pagamento em dia, suporte técnico e desenvolvimento profissional.
             </p>
-            <a href="https://wa.me/5585987884574?text=Olá! Vim do site da MSH e sou médico interessado em vagas" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-[#E91E63] hover:bg-[#C2185B] text-white rounded-lg font-semibold transition-colors relative z-10">
+            <a href="#sou-medico" className="inline-flex items-center px-6 py-3 bg-[#E91E63] hover:bg-[#C2185B] text-white rounded-lg font-semibold transition-colors relative z-10">
               Quero me Cadastrar
               <ArrowRight size={18} className="ml-2" />
             </a>

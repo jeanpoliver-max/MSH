@@ -20,6 +20,7 @@ import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import CookieBanner from './components/CookieBanner';
 import TermsOfUse from './components/TermsOfUse';
+import SouMedico from './components/SouMedico';
 
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
@@ -29,7 +30,7 @@ export default function App() {
       const hash = window.location.hash;
       setCurrentHash(hash);
       
-      if (hash === '#termos' || hash === '' || hash === '#inicio') {
+      if (hash === '#termos' || hash === '#sou-medico' || hash === '' || hash === '#inicio') {
         window.scrollTo(0, 0);
       } else {
         // Allow a short delay for React to render the main components if coming from privacy page
@@ -47,6 +48,11 @@ export default function App() {
   }, []);
 
   const isTermsOfUse = currentHash === '#termos';
+  const isSouMedico = currentHash === '#sou-medico';
+
+  if (isSouMedico) {
+    return <SouMedico />;
+  }
 
   return (
     <div className="min-h-screen bg-[#F3F4F6] scroll-smooth flex flex-col">

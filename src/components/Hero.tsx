@@ -29,7 +29,7 @@ export default function Hero() {
               Solicitar Proposta
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-            <a href="#contato" className="px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-[#0077B6] hover:bg-white text-[#0077B6] rounded-xl font-bold transition-colors text-center flex items-center justify-center shadow-sm">
+            <a href="#sou-medico" className="px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-[#0077B6] hover:bg-white text-[#0077B6] rounded-xl font-bold transition-colors text-center flex items-center justify-center shadow-sm">
               Sou Médico — Ver Vagas
             </a>
           </div>
