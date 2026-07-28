@@ -71,20 +71,18 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex flex-col gap-2 text-blue-200 mt-2">
-                <div className="flex items-center gap-3">
-                  <Phone size={20} className="flex-shrink-0" />
-                  <a href="tel:+5547984088090" className="hover:text-white">(47) 98408-8090</a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone size={20} className="flex-shrink-0 opacity-0" />
-                  <a href="tel:+554198581831" className="hover:text-white">(41) 9858-1831</a>
+                <div className="flex items-start gap-3">
+                  <Phone size={20} className="flex-shrink-0 mt-1" />
+                  <div className="flex flex-col">
+                    <span className="font-bold text-white text-xs uppercase mb-1">Administrativo</span>
+                    <a href="tel:+5547984088090" className="hover:text-white">(47) 98408-8090</a>
+                  </div>
                 </div>
                 <div className="flex items-start gap-3 mt-2">
                   <Phone size={20} className="flex-shrink-0 mt-1 text-[#E91E63]" />
                   <div className="flex flex-col">
                     <span className="font-bold text-white text-xs uppercase mb-1">Recrutamento Médico</span>
-                    <a href="tel:+5585987884574" className="hover:text-white">(85) 98788-4574</a>
-                    <a href="tel:+5541988832445" className="hover:text-white">(41) 98883-2445</a>
+                    <a href="tel:+5547999387944" className="hover:text-white">(47) 99938-7944</a>
                   </div>
                 </div>
               </li>
