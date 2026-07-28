@@ -18,7 +18,7 @@ export default function Contact() {
     e.preventDefault();
     if (!formData.name || !formData.phone) return alert("Por favor, preencha pelo menos nome e telefone.");
     const text = `Olá! Meu nome é ${formData.name}. Sou ${formData.userType}. %0A%0ATelefone: ${formData.phone}%0A%0A${formData.message}`;
-    const targetPhone = formData.userType === 'Médico(a)' ? '5585987884574' : '5547984088090';
+    const targetPhone = '5547984088090';
     window.open(`https://wa.me/${targetPhone}?text=${text}`, '_blank');
   };
 
