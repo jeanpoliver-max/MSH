@@ -24,6 +24,8 @@ import SouMedico from './components/SouMedico';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollProgress from './components/ScrollProgress';
 
+import PrivacyPolicy from './components/PrivacyPolicy';
+
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
 
@@ -32,7 +34,7 @@ export default function App() {
       const hash = window.location.hash;
       setCurrentHash(hash);
       
-      if (hash === '#termos' || hash === '#sou-medico' || hash === '' || hash === '#inicio') {
+      if (hash === '#termos' || hash === '#privacidade' || hash === '#sou-medico' || hash === '' || hash === '#inicio') {
         window.scrollTo(0, 0);
       } else {
         // Allow a short delay for React to render the main components if coming from privacy page
@@ -50,6 +52,7 @@ export default function App() {
   }, []);
 
   const isTermsOfUse = currentHash === '#termos';
+  const isPrivacyPolicy = currentHash === '#privacidade';
   const isSouMedico = currentHash === '#sou-medico';
 
   if (isSouMedico) {
@@ -68,6 +71,8 @@ export default function App() {
       <main className="flex-grow">
         {isTermsOfUse ? (
           <TermsOfUse />
+        ) : isPrivacyPolicy ? (
+          <PrivacyPolicy />
         ) : (
           <>
             <Hero />

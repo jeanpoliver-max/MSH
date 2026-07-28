@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop" 
+          src="/hero-bg.jpg" 
           alt="Gestão Médica" 
           className="w-full h-full object-cover opacity-30"
         />
