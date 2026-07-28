@@ -1,4 +1,3 @@
-import heroBg from "../assets/hero-bg.jpg";
 import { ArrowRight } from 'lucide-react';
 
 
@@ -8,7 +7,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroBg} 
+          src="https://i.imgur.com/dLfcnt6.jpeg" 
           alt="Gestão Médica" 
           className="w-full h-full object-cover opacity-80"
         />

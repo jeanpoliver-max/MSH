@@ -1,4 +1,3 @@
-import aboutTeam from "../assets/about-team.png";
 
 
 export default function About() {
@@ -43,7 +42,7 @@ export default function About() {
             <div className="rounded-3xl overflow-hidden bg-gray-100 relative">
                <div className="absolute inset-0 bg-gradient-to-tr from-[#0077B6]/20 to-transparent z-10"></div>
                <img 
-                 src={aboutTeam} 
+                 src="https://i.imgur.com/S7sjD5W.png" 
                  alt="Equipe médica da MSH - profissionais qualificados em ambiente hospitalar"
                  loading="lazy"
                  className="w-full h-auto block"

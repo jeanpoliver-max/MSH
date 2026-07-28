@@ -1,4 +1,3 @@
-import logoImg from "../assets/logo.png";
 
 import { Instagram, MapPin, Mail, Phone } from 'lucide-react';
 
@@ -12,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="mb-6 bg-white rounded-xl inline-block p-3">
               <img 
-                src={logoImg} 
+                src="https://i.imgur.com/a12JKWY.png" 
                 alt="MSH - Clínica, Gestão e Serviços Médicos - Logotipo" 
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
