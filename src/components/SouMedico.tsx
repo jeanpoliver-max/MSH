@@ -105,8 +105,8 @@ const SouMedico = () => {
               Cadastrar Meu Perfil
             </a>
             <a href="#grupos" onClick={(e) => scrollToSection(e, 'grupos')} className="px-8 py-3 bg-transparent hover:bg-white/10 text-white border-2 border-white/30 rounded-xl transition-colors flex flex-col items-center justify-center">
-              <span className="text-xs font-normal opacity-80 mb-0.5">Já sou cadastrado</span>
-              <span className="font-bold">Acessar Grupos</span>
+              <span className="text-sm font-normal opacity-90 mb-0.5">Já sou cadastrado</span>
+              <span className="font-bold text-lg">Entrar no Grupo</span>
             </a>
           </div>
           
