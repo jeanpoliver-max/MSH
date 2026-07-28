@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ExternalLink } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function Header() {
         <a href="#inicio" className="flex items-center space-x-3 group">
           <div className="relative h-[50px] flex items-center justify-center">
             <img 
-              src="/logo.png" 
+              src={logoImg} 
               alt="MSH - Clínica, Gestão e Serviços Médicos - Logotipo" 
               className="h-full w-auto object-contain z-10"
               onError={(e) => {

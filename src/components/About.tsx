@@ -1,3 +1,5 @@
+import aboutTeam from '../assets/about-team.jpg';
+
 export default function About() {
   return (
     <section id="quem-somos" className="py-24 bg-white relative overflow-hidden">
@@ -40,7 +42,7 @@ export default function About() {
             <div className="rounded-3xl overflow-hidden bg-gray-100 relative">
                <div className="absolute inset-0 bg-gradient-to-tr from-[#0077B6]/20 to-transparent z-10"></div>
                <img 
-                 src="/about-team.jpg" 
+                 src={aboutTeam} 
                  alt="Equipe médica da MSH - profissionais qualificados em ambiente hospitalar"
                  loading="lazy"
                  className="w-full h-auto block"
