@@ -51,6 +51,12 @@ export default function Differentials() {
             </div>
           ))}
         </div>
+
+        <div className="flex justify-center mt-16">
+          <a href="#contato" className="px-8 py-4 bg-[#0077B6] hover:bg-[#005f92] text-white rounded-xl font-bold shadow-lg transition-colors flex items-center justify-center">
+            Falar com Especialista
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -21,6 +21,8 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import CookieBanner from './components/CookieBanner';
 import TermsOfUse from './components/TermsOfUse';
 import SouMedico from './components/SouMedico';
+import ScrollToTop from './components/ScrollToTop';
+import ScrollProgress from './components/ScrollProgress';
 
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
@@ -51,11 +53,17 @@ export default function App() {
   const isSouMedico = currentHash === '#sou-medico';
 
   if (isSouMedico) {
-    return <SouMedico />;
+    return (
+      <>
+        <ScrollProgress />
+        <SouMedico />
+      </>
+    );
   }
 
   return (
     <div className="min-h-screen bg-[#F3F4F6] scroll-smooth flex flex-col">
+      <ScrollProgress />
       <Header />
       <main className="flex-grow">
         {isTermsOfUse ? (
@@ -78,6 +86,7 @@ export default function App() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <ScrollToTop />
       <CookieBanner />
     </div>
   );

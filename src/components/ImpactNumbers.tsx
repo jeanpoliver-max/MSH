@@ -1,75 +1,22 @@
-import { useEffect, useState, useRef } from 'react';
-
-function Counter({ end, suffix = '', duration = 2 }: { end: number, suffix?: string, duration?: number }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    let observer: IntersectionObserver;
-    
-    const startAnimation = () => {
-      let startTime: number | null = null;
-      const step = (timestamp: number) => {
-        if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-        setCount(Math.floor(progress * end));
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        } else {
-          setCount(end);
-        }
-      };
-      window.requestAnimationFrame(step);
-    };
-
-    if (ref.current) {
-      observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          startAnimation();
-          if (ref.current) observer.unobserve(ref.current);
-        }
-      }, { threshold: 0.1 });
-      
-      observer.observe(ref.current);
-    } else {
-       setCount(end);
-    }
-
-    return () => {
-      if (observer && ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [end, duration]);
-
-  useEffect(() => {
-    if (typeof IntersectionObserver === 'undefined') {
-       setCount(end);
-    }
-  }, [end]);
-
-  return <span ref={ref} data-target={end} data-suffix={suffix}>{count.toLocaleString('pt-BR')}{suffix}</span>;
-}
-
 export default function ImpactNumbers() {
   return (
     <section className="bg-[#0077B6] py-12 md:py-16 relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-5 md:divide-x divide-white/20 gap-y-8 md:gap-y-0">
           <div className="text-center px-4">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+<Counter end={2000} /></div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+2.000</div>
             <div className="text-xs uppercase tracking-wider font-medium text-blue-100">Médicos Ativos</div>
           </div>
           <div className="text-center px-4">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+<Counter end={7000} /></div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+7.000</div>
             <div className="text-xs uppercase tracking-wider font-medium text-blue-100">Plantões Mensais</div>
           </div>
           <div className="text-center px-4">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+<Counter end={4} /></div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+4</div>
             <div className="text-xs uppercase tracking-wider font-medium text-blue-100">Estados Atendidos</div>
           </div>
           <div className="text-center px-4">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+<Counter end={10} /></div>
+            <div className="text-3xl md:text-4xl font-bold text-white mb-1">+10</div>
             <div className="text-xs uppercase tracking-wider font-medium text-blue-100">Cidades Atendidas</div>
           </div>
           <div className="text-center px-4 col-span-2 lg:col-span-1">

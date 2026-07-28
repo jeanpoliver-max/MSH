@@ -15,9 +15,9 @@ export default function Hero() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left">
         <div className="max-w-3xl">
-          <span className="text-[#E91E63] font-semibold tracking-[0.15em] uppercase text-sm md:text-base mb-4 inline-block md:block">
+          <p className="text-[#E91E63] font-bold tracking-[0.15em] uppercase text-sm md:text-base mb-4 inline-block md:block">
             SAÚDE: NOSSA MISSÃO, CUIDAR: NOSSO COMPROMISSO
-          </span>
+          </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1F2937] leading-[1.1] mb-6">
             Gestão Médica de Alta <span className="text-[#0077B6]">Performance</span> para Instituições de Saúde
           </h1>

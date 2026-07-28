@@ -116,6 +116,12 @@ export default function Clients() {
             </div>
           </div>
         </div>
+        
+        <div className="flex justify-center mt-16">
+          <a href="#contato" className="px-8 py-4 bg-[#E91E63] hover:bg-[#C2185B] text-white rounded-xl font-bold shadow-lg transition-colors flex items-center justify-center">
+            Seja Nosso Parceiro
+          </a>
+        </div>
       </div>
     </section>
   );
