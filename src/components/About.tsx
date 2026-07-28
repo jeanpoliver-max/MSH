@@ -1,4 +1,4 @@
-import aboutTeam from "../assets/about-team.jpg";
+import aboutTeam from "../assets/about-team.png";
 
 
 export default function About() {
