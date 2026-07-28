@@ -76,7 +76,7 @@ const SouMedico = () => {
         <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-10 bg-white rounded-lg flex items-center justify-center relative px-2 py-1">
-              <img src="https://i.imgur.com/vYCZCGE.png" alt="MSH Logo" className="h-full w-auto object-contain" />
+              <img src="/logo.png" alt="MSH Logo" className="h-full w-auto object-contain" />
             </div>
             <span className="text-white font-bold text-xl hidden sm:block">MSH+ Hub</span>
           </div>
@@ -100,11 +100,11 @@ const SouMedico = () => {
           <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto">
             Cadastre seu perfil e receba oportunidades de plantão em hospitais, UPAs e clínicas em 4 estados. Pagamento em dia, suporte técnico e desenvolvimento profissional.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#cadastro" onClick={(e) => scrollToSection(e, 'cadastro')} className="px-8 py-4 bg-[#E91E63] hover:bg-[#C2185B] text-white rounded-xl font-bold shadow-lg transition-colors">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
+            <a href="#cadastro" onClick={(e) => scrollToSection(e, 'cadastro')} className="px-8 bg-[#E91E63] hover:bg-[#C2185B] text-white rounded-xl font-bold shadow-lg transition-colors flex items-center justify-center min-h-[72px]">
               Cadastrar Meu Perfil
             </a>
-            <a href="#grupos" onClick={(e) => scrollToSection(e, 'grupos')} className="px-8 py-3 bg-transparent hover:bg-white/10 text-white border-2 border-white/30 rounded-xl transition-colors flex flex-col items-center justify-center">
+            <a href="#grupos" onClick={(e) => scrollToSection(e, 'grupos')} className="px-8 bg-transparent hover:bg-white/10 text-white border-2 border-white/30 rounded-xl transition-colors flex flex-col items-center justify-center min-h-[72px]">
               <span className="text-sm font-normal opacity-90 mb-0.5">Já sou cadastrado</span>
               <span className="font-bold text-lg">Entrar no Grupo</span>
             </a>
@@ -357,7 +357,7 @@ const SouMedico = () => {
       <footer className="bg-[#023E8A] py-12 text-center text-white/70">
         <div className="flex justify-center items-center gap-2 mb-6">
           <div className="h-8 bg-white rounded-md flex items-center justify-center relative px-2 py-1">
-            <img src="https://i.imgur.com/vYCZCGE.png" alt="MSH Logo" className="h-full w-auto object-contain" />
+            <img src="/logo.png" alt="MSH Logo" className="h-full w-auto object-contain" />
           </div>
           <span className="text-white font-bold text-lg">MSH+ Hub</span>
         </div>

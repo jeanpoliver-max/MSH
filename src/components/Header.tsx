@@ -28,7 +28,7 @@ export default function Header() {
         <a href="#inicio" className="flex items-center space-x-3 group">
           <div className="relative h-[50px] flex items-center justify-center">
             <img 
-              src="https://i.imgur.com/vYCZCGE.png" 
+              src="/logo.png" 
               alt="MSH - Clínica, Gestão e Serviços Médicos - Logotipo" 
               className="h-full w-auto object-contain z-10"
               onError={(e) => {

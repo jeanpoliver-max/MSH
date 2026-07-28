@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="mb-6 bg-white rounded-xl inline-block p-3">
               <img 
-                src="https://i.imgur.com/vYCZCGE.png" 
+                src="/logo.png" 
                 alt="MSH - Clínica, Gestão e Serviços Médicos - Logotipo" 
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
