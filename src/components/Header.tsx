@@ -1,3 +1,4 @@
+import logoImg from "../assets/logo.png";
 
 import { useState, useEffect } from 'react';
 import { Menu, X, ExternalLink } from 'lucide-react';
@@ -30,7 +31,7 @@ export default function Header() {
         <a href="#inicio" className="flex items-center space-x-3 group">
           <div className="relative h-[50px] flex items-center justify-center">
             <img 
-              src="https://placehold.co/200x60/ffffff/0077B6.png?text=MSH" 
+              src={logoImg} 
               alt="MSH - Clínica, Gestão e Serviços Médicos - Logotipo" 
               className="h-full w-auto object-contain z-10"
             />
