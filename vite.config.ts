@@ -5,10 +5,12 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Configura o caminho base para o subdiretório do GitHub Pages
+    base: '/MSH/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(__dirname, './src'),
       },
     },
     server: {
@@ -16,7 +18,7 @@ export default defineConfig(() => {
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
       host: '0.0.0.0',
       port: 3000,
-      allowedHosts: true as const
+      allowedHosts: true as const,
     },
   };
 });
