@@ -5,7 +5,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    // Configura o caminho base para o subdiretório do GitHub Pages
     base: '/MSH/',
     plugins: [react(), tailwindcss()],
     resolve: {
