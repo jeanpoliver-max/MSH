@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import heroBg from '../assets/hero-bg.jpg';
+
 
 export default function Hero() {
   return (
@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroBg} 
+          src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop" 
           alt="Gestão Médica" 
           className="w-full h-full object-cover opacity-30"
         />

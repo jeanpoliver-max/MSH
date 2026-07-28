@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, UserRoundPlus, FileCheck, Stethoscope, CheckCircle2, MapPin, Building, ChevronDown, ChevronUp } from 'lucide-react';
-import logoImg from '../assets/logo.png';
+
 
 const SouMedico = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -77,7 +78,7 @@ const SouMedico = () => {
         <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-10 bg-white rounded-lg flex items-center justify-center relative px-2 py-1">
-              <img src={logoImg} alt="MSH Logo" className="h-full w-auto object-contain" />
+              <img src="https://placehold.co/200x60/ffffff/0077B6.png?text=MSH" alt="MSH Logo" className="h-full w-auto object-contain" />
             </div>
             <span className="text-white font-bold text-xl hidden sm:block">MSH+ Hub</span>
           </div>
@@ -358,7 +359,7 @@ const SouMedico = () => {
       <footer className="bg-[#023E8A] py-12 text-center text-white/70">
         <div className="flex justify-center items-center gap-2 mb-6">
           <div className="h-8 bg-white rounded-md flex items-center justify-center relative px-2 py-1">
-            <img src={logoImg} alt="MSH Logo" className="h-full w-auto object-contain" />
+            <img src="https://placehold.co/200x60/ffffff/0077B6.png?text=MSH" alt="MSH Logo" className="h-full w-auto object-contain" />
           </div>
           <span className="text-white font-bold text-lg">MSH+ Hub</span>
         </div>

@@ -1,4 +1,4 @@
-import aboutTeam from '../assets/about-team.jpg';
+
 
 export default function About() {
   return (
@@ -42,7 +42,7 @@ export default function About() {
             <div className="rounded-3xl overflow-hidden bg-gray-100 relative">
                <div className="absolute inset-0 bg-gradient-to-tr from-[#0077B6]/20 to-transparent z-10"></div>
                <img 
-                 src={aboutTeam} 
+                 src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1000&auto=format&fit=crop" 
                  alt="Equipe médica da MSH - profissionais qualificados em ambiente hospitalar"
                  loading="lazy"
                  className="w-full h-auto block"

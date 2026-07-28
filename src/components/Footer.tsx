@@ -1,5 +1,6 @@
+
 import { Instagram, MapPin, Mail, Phone } from 'lucide-react';
-import logoImg from '../assets/logo.png';
+
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="mb-6 bg-white rounded-xl inline-block p-3">
               <img 
-                src={logoImg} 
+                src="https://placehold.co/200x60/ffffff/0077B6.png?text=MSH" 
                 alt="MSH - Clínica, Gestão e Serviços Médicos - Logotipo" 
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
