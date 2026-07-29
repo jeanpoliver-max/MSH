@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/MSH/',
+    base: '/', // <--- Altere de '/MSH/' para apenas '/'
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
